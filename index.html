@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/output.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
   </head>
   <body>
@@ -82,7 +87,7 @@
         </div>
         <div
           id="sidebar"
-          class="fixed top-0 right-0 h-full w-3/5 bg-primary z-10 text-background flex flex-col gap-6 py-6 md:hidden transition-all duration-200"
+          class="fixed top-0 right-0 h-full w-3/5 bg-primary z-50 text-background flex flex-col gap-6 py-6 md:hidden transition-all duration-200"
         >
           <button
             id="close-btn"
@@ -408,6 +413,7 @@
           </div>
         </div>
       </section>
+
       <section
         class="flex flex-col items-center justify-center w-11/12 gap-y-4 mx-auto"
       >
@@ -627,17 +633,15 @@
         </div>
       </section>
       <section
-        class="flex flex-col bg-third items-center justify-center w-full py-8 gap-y-4"
+        class="flex flex-col relative bg-third items-center justify-center w-full py-8 gap-y-4"
       >
         <h1
           class="text-primary text-4xl md:max-w-[350px] max-w-11/12 font-bold text-center capitalize"
         >
           What People Say About Dwello
         </h1>
-        <div class="swiper w-10/12">
-          <div
-            class="swiper-wrapper flex items-center justify-center gap-4 my-4"
-          >
+        <div class="swiper w-10/12 my-10">
+          <div class="swiper-wrapper my-4 py-4">
             <div
               class="swiper-slide w-[382px] hover:shadow-[0_0_6px_#2b1b128a] rounded-2xl shadow-lg bg-secondary flex flex-col"
             >
@@ -679,7 +683,7 @@
               </div>
             </div>
             <div
-              class="w-[382px] hover:shadow-[0_0_6px_#2b1b128a] rounded-2xl shadow-lg bg-secondary flex flex-col"
+              class="swiper-slide w-[382px] hover:shadow-[0_0_6px_#2b1b128a] rounded-2xl shadow-lg bg-secondary flex flex-col"
             >
               <img
                 src="./asstes/Mask group (4).png"
@@ -719,7 +723,47 @@
               </div>
             </div>
             <div
-              class="w-[382px] hover:shadow-[0_0_6px_#2b1b128a] rounded-2xl shadow-lg bg-secondary flex flex-col"
+              class="swiper-slide w-[382px] hover:shadow-[0_0_6px_#2b1b128a] rounded-2xl shadow-lg bg-secondary flex flex-col"
+            >
+              <img
+                src="./asstes/Mask group (4).png"
+                alt="House"
+                class="w-full h-44 object-cover object-center rounded-t-2xl"
+              />
+
+              <div class="flex flex-col gap-4 p-5 rounded-b-2xl bg-secondary">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./asstes/person.jpg"
+                      alt="user"
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div class="flex flex-col leading-tight">
+                      <h3 class="font-bold text-xl text-primary">
+                        Michael Rodriguez
+                      </h3>
+                      <p class="text-primary text-base">San Diego</p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center bg-white p-2 rounded-md shadow-sm"
+                  >
+                    <span class="text-yellow-500 text-lg">⭐</span>
+                    <span class="ml-1 text-base font-semibold text-primary"
+                      >4.5</span
+                    >
+                  </div>
+                </div>
+                <p class="text-base text-text leading-relaxed font-semibold">
+                  I had a fantastic experience working with Dwello. Their
+                  expertise and personalized service exceeded my expectations. I
+                  found my dream home quickly and smoothly. Highly recommended!
+                </p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide w-[382px] hover:shadow-[0_0_6px_#2b1b128a] rounded-2xl shadow-lg bg-secondary flex flex-col"
             >
               <img
                 src="./asstes/Mask group (4).png"
@@ -759,51 +803,51 @@
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="absolute bottom-1/12 z-20 flex items-center justify-center w-[110px] mx-auto"
+        >
           <div
-            class="flex w-10/12 mx-auto items-center justify-center my-8 gap-4"
+            class="swiper-button-next bg-primary rounded-full text-secondary flex items-center justify-center"
           >
-            <div
-              class="swiper-button-prev font-bold text-2xl cursor-pointer bg-primary text-background w-10 rounded-full flex items-center justify-center h-10"
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 12h14M5 12l4-4m-4 4 4 4"
-                />
-              </svg>
-            </div>
-            <div
-              class="swiper-button-next font-bold cursor-pointer text-2xl bg-primary text-background w-10 rounded-full flex items-center justify-center h-10"
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4"
+              />
+            </svg>
+          </div>
+          <div
+            class="swiper-button-prev bg-primary rounded-full text-secondary flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 12H5m14 0-4 4m4-4-4-4"
-                />
-              </svg>
-            </div>
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M5 12l4-4m-4 4 4 4"
+              />
+            </svg>
           </div>
         </div>
       </section>
@@ -1028,5 +1072,6 @@
     </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./index.js"></script>
 </html>
